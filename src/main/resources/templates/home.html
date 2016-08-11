@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <title>Spring Boot Contacts</title>
     <link rel="stylesheet" th:href="@{/style.css}" />
 </head>
 <body>
-<h2>Spring Boot Contacts</h2>
+<h2>Spring Boot Contacts </h2>
+welcome :<span sec:authentication="name">name</span>
 <form method="POST">
     <label for="firstName">First Name:</label>
     <input type="text" name="firstName"></input><br/>
